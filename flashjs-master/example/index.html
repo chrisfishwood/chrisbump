@@ -6,11 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FlashJS examples | BetaWeb</title>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="app.css">
   <link rel="stylesheet" href="../dist/flash.css">
 </head>
-
-  
-
 <body>
   <h1>FlashJS examples</h1>
 
@@ -26,24 +24,16 @@
     <div class="flash-message flash-error jq-msg" data-type="error" data-theme="dark" data-timeout="20000">My sadly sad error message with jQuery plugin !</div>
   </div>
 
-  <button
+  <button 
     id="flash-btn"
-    data-type="success"
-    data-message="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam beatae unde quisquam maiores dolorem ad facilis corporis ipsum reprehenderit."
+    data-type="success" 
+    data-message="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam beatae unde quisquam maiores dolorem ad facilis corporis ipsum reprehenderit." 
     data-timeout="20000"
   >Success flash</button>
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="../dist/flash.min.js"></script>
   <script src="../dist/flash.jquery.min.js"></script>
-  <script src="../dist/app.js"></script>
-  <script>
-    function bumpIt(){
-      alert("BUMPED!");
-    }
-  </script>
-  <button onclick="bumpIt()">🤜🤛</button>
-
+  <script src="./app.js"></script>
 </body>
 </html>
-
