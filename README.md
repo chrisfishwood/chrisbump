@@ -11,6 +11,7 @@
         container: '.flash-container',
         theme: 'default'
     });
+   }
   </script>
 
 <button onclick="bumpIt()">🤜🤛</button>
