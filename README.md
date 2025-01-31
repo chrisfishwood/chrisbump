@@ -13,7 +13,7 @@
     }
   </script>
 
-<div onclick="bumpIt()">🤜🤛</div>
+<button onclick="bumpIt()">🤜🤛</button>
 
 🤜🤛 for Chris  
 </html>
