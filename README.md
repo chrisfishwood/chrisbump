@@ -10,7 +10,7 @@
         appear_delay: 200,
         container: '.flash-container',
         theme: 'default'
-    }
+    });
   </script>
 
 <button onclick="bumpIt()">🤜🤛</button>
