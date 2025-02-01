@@ -2,16 +2,26 @@
 
   'use strict';
 
-  // With vanilla JavaScript
+  function randomChris() {
+    const array = ["Chris Steinmeyer",
+		   "Chris Frost",
+		   "Chris Prewitt"];
+
+    const randomIndex = Math.floor(Math.random() * array.length);
+    const randomElement = array[randomIndex];
+
+    console.log(randomElement);
+    return randomElement;
+  }
   document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('flash-btn').addEventListener('click', function () {
+    //remove first h1 on the page
+    document.getElementById('fistbump-btn').addEventListener('click', function () {
     new window.FlashMessage(
-	this.dataset.message,
+        `You fistbumped  ${randomChris()}! Life is good!`,
 	this.dataset.type,
         {
           timeout: this.dataset.timeout,
-          progress: true,
-          // thumb: 'https://pbs.twimg.com/profile_images/659436766420672512/-pS2Bgfl.jpg'
+          progress: true
         });
 
     });
