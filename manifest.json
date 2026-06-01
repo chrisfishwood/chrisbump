@@ -1,0 +1,17 @@
+{
+  "name": "Chrisbump",
+  "short_name": "Chrisbump",
+  "description": "Give a random Chris a fist bump",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

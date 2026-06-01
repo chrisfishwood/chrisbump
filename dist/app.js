@@ -1,31 +1,40 @@
-(function (window, document, $, undefined) {
+(function (window, document, undefined) {
 
   'use strict';
 
+  const names = [
+    "Chris Steinmeyer",
+    "Chris Frost",
+    "Chris Prewitt"
+  ];
+
   function randomChris() {
-    const array = ["Chris Steinmeyer",
-		   "Chris Frost",
-		   "Chris Prewitt"];
-
-    const randomIndex = Math.floor(Math.random() * array.length);
-    const randomElement = array[randomIndex];
-
-    console.log(randomElement);
-    return randomElement;
+    return names[Math.floor(Math.random() * names.length)];
   }
-  document.addEventListener('DOMContentLoaded', function () {
-    //remove first h1 on the page
-    document.getElementById('fistbump-btn').addEventListener('click', function () {
-    new window.FlashMessage(
-        `You fistbumped  ${randomChris()}! Life is good!`,
-	this.dataset.type,
-        {
-          timeout: this.dataset.timeout,
-          progress: true
-        });
 
+  function fistBump(btn) {
+    if ('vibrate' in navigator) {
+      navigator.vibrate(50);
+    }
+    new window.FlashMessage(
+      `You fistbumped ${randomChris()}! Life is good!`,
+      btn.dataset.type,
+      { timeout: btn.dataset.timeout, progress: true }
+    );
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('fistbump-btn');
+
+    // touchend fires immediately without 300ms delay; preventDefault blocks the ghost click
+    btn.addEventListener('touchend', function (e) {
+      e.preventDefault();
+      fistBump(this);
     });
 
+    btn.addEventListener('click', function () {
+      fistBump(this);
+    });
   }, false);
 
-})(window, document)
+})(window, document);

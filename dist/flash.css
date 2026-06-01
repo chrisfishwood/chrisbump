@@ -1,9 +1,21 @@
 /* FLASHJS - DEFAULT THEME */
 /* FLASH JS THEME VARIABLES */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 #fistbump-btn {
-  width: 50%;
-  height: 50%;
-  font-size: 350px;
+  background: none;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: clamp(80px, 40vmin, 350px);
+  line-height: 1;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
 }
 .fistbump-div {
   display: flex;
