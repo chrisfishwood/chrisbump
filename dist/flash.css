@@ -9,8 +9,10 @@ html, body {
   display: inline-block;
 }
 
-/* Pull the two emoji together so knuckles touch at rest */
-.fist-left { margin-right: -0.08em; }
+/* Pull the two emoji together on touch devices where emoji have more internal padding */
+@media (hover: none) {
+  .fist-left { margin-right: -0.08em; }
+}
 
 @keyframes fist-left-bump {
   0%   { transform: translateX(0);       animation-timing-function: ease-out; }
