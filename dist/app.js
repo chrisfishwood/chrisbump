@@ -13,14 +13,23 @@
   }
 
   function fistBump(btn) {
-    if ('vibrate' in navigator) {
-      navigator.vibrate(50);
-    }
-    new window.FlashMessage(
-      `You fistbumped ${randomChris()}! Life is good!`,
-      btn.dataset.type,
-      { timeout: btn.dataset.timeout, progress: true }
-    );
+    if (btn.classList.contains('bumping')) return;
+
+    btn.classList.add('bumping');
+
+    // Haptic fires at the moment of impact (70% through the 600ms animation)
+    setTimeout(function () {
+      if ('vibrate' in navigator) navigator.vibrate(50);
+    }, 420);
+
+    setTimeout(function () {
+      btn.classList.remove('bumping');
+      new window.FlashMessage(
+        `You fistbumped ${randomChris()}! Life is good!`,
+        btn.dataset.type,
+        { timeout: btn.dataset.timeout, progress: true }
+      );
+    }, 650);
   }
 
   document.addEventListener('DOMContentLoaded', function () {
