@@ -9,17 +9,20 @@ html, body {
   display: inline-block;
 }
 
+/* Pull the two emoji together so knuckles touch at rest */
+.fist-left { margin-right: -0.08em; }
+
 @keyframes fist-left-bump {
   0%   { transform: translateX(0);       animation-timing-function: ease-out; }
   30%  { transform: translateX(-0.25em); animation-timing-function: ease-in;  }
-  70%  { transform: translateX(0.03em);  animation-timing-function: ease-out; }
+  70%  { transform: translateX(0.12em);  animation-timing-function: ease-out; }
   100% { transform: translateX(0); }
 }
 
 @keyframes fist-right-bump {
   0%   { transform: translateX(0);       animation-timing-function: ease-out; }
   30%  { transform: translateX(0.25em);  animation-timing-function: ease-in;  }
-  70%  { transform: translateX(-0.03em); animation-timing-function: ease-out; }
+  70%  { transform: translateX(-0.12em); animation-timing-function: ease-out; }
   100% { transform: translateX(0); }
 }
 
