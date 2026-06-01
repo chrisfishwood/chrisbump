@@ -7,6 +7,8 @@ html, body {
 }
 .fist {
   display: inline-block;
+  position: relative;
+  z-index: 0;
 }
 
 /* Pull the two emoji together on touch devices where emoji have more internal padding */
@@ -39,6 +41,7 @@ html, body {
   opacity: 0;
   pointer-events: none;
   line-height: 1;
+  z-index: 1;
 }
 
 @keyframes boom-appear {
